@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#9b6ff3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      :root {
+        --vp-font-heading: 'Archivo', system-ui, sans-serif;
+        --vp-font-body: 'Archivo', system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header-inner">
+        <a class="brand" href={base}>CHURN SHEET</a>
+        <nav class="nav">
+          <a href={`${base}#how`}>How it works</a>
+          <a href={`${base}about`}>About</a>
+          <a class="btn btn-primary" href="https://github.com/virgiperpetua/poc-gelato-app">Open app</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer-inner">
+        <div>© {new Date().getFullYear()} Churn Sheet · Virginia Perpetua</div>
+        <div class="footer-links">
+          <a href="https://github.com/virgiperpetua/poc-gelato-app">App</a>
+          <a href="https://github.com/virgiperpetua/poc-gelato-marketing">Marketing</a>
+          <a href="https://virgiperpetua.com">virgiperpetua.com</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

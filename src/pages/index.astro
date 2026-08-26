@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Churn Sheet — Gelato production planner"
+  description="Know what to churn, how much to wash, and what’s running low — built for a real gelato floor."
+>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker mono">CHURN SHEET</p>
+        <h1>Plan the churn. Protect the wash.</h1>
+        <p class="lede">
+          A mobile production planner for freezer stock, bladder deliveries, allergen-safe wash
+          steps, and the next shift’s churn list.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/virgiperpetua/poc-gelato-app"
+            >View the app</a
+          >
+          <a class="btn btn-secondary" href={`${base}#how`}>See how it works</a>
+        </div>
+      </div>
+      <div class="preview" aria-hidden="true">
+        <div class="mono kicker" style="margin:0">TODAY · SHIFT READY</div>
+        <div class="preview-card">
+          <div style="font-weight:600;font-size:14px">Priority queue</div>
+          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
+            Fondant · below PAR · 2 bladders
+          </div>
+        </div>
+        <div class="preview-card">
+          <div style="font-weight:600;font-size:14px">Wash gate</div>
+          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
+            Coffee → Group D only if Coffee churned
+          </div>
+        </div>
+        <div class="preview-card">
+          <div style="font-weight:600;font-size:14px">Bake ahead</div>
+          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
+            Macadamia crunch · before churner starts
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <p class="kicker mono">HOW IT WORKS</p>
+      <h2>One floor tool. Three roles.</h2>
+      <p>
+        Manager approves the plan. Staff count freezers and bake components. Churner follows a
+        wash-safe sequence without guessing the next allergen risk.
+      </p>
+      <div class="pillars">
+        <article>
+          <div class="mono" style="color:var(--vp-color-accent-strong)">01</div>
+          <h3>Stock truth</h3>
+          <p>−20 / −14 counts, bladder deliveries, and use-today alerts feed the priority engine.</p>
+        </article>
+        <article>
+          <div class="mono" style="color:var(--vp-color-accent-strong)">02</div>
+          <h3>Shift-fit plans</h3>
+          <p>Recommendations fill available churn minutes after setup, wash, and clean-down.</p>
+        </article>
+        <article>
+          <div class="mono" style="color:var(--vp-color-accent-strong)">03</div>
+          <h3>Safe sequence</h3>
+          <p>Group order plus conditional washes (Coffee → D) so the machine stays allergen-safe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface">
+    <div class="wrap">
+      <h2>Built for the shop floor. Ready for an API.</h2>
+      <p>
+        The PoC stores everything in localStorage behind a repository interface. When the Nest API
+        lands, the same screens swap to HTTP without a rewrite.
+      </p>
+      <p style="margin-top:32px">
+        <a class="btn btn-primary" href="https://github.com/virgiperpetua/poc-gelato-app"
+          >Explore poc-gelato-app</a
+        >
+      </p>
+    </div>
+  </section>
+</BaseLayout>
