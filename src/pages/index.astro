@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { links } from '../config';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -18,9 +19,7 @@ const base = import.meta.env.BASE_URL;
           steps, and the next shift’s churn list.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://github.com/virgiperpetua/poc-gelato-app"
-            >View the app</a
-          >
+          <a class="btn btn-primary" href={links.app}>Open the app</a>
           <a class="btn btn-secondary" href={`${base}#how`}>See how it works</a>
         </div>
       </div>
@@ -83,10 +82,9 @@ const base = import.meta.env.BASE_URL;
         The PoC stores everything in localStorage behind a repository interface. When the Nest API
         lands, the same screens swap to HTTP without a rewrite.
       </p>
-      <p style="margin-top:32px">
-        <a class="btn btn-primary" href="https://github.com/virgiperpetua/poc-gelato-app"
-          >Explore poc-gelato-app</a
-        >
+      <p class="cta-row" style="margin-top:32px">
+        <a class="btn btn-primary" href={links.app}>Open the app</a>
+        <a class="btn btn-secondary" href={links.appRepo}>Read the source</a>
       </p>
     </div>
   </section>
