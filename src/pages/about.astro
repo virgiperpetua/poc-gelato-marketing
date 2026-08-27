@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { links } from '../config';
 ---
 
 <BaseLayout
@@ -17,7 +18,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p>
       This marketing site and the companion app are public PoCs under Virginia Perpetua’s GitHub,
       mirrored to GitLab. Design tokens come from
-      <a href="https://github.com/virgiperpetua/tokens">virgiperpetua/tokens</a>.
+      <a href={links.tokensRepo}>virgiperpetua/tokens</a>.
+    </p>
+    <p>
+      <a href={links.app}>Open the live app</a> or
+      <a href={links.appRepo}>browse its source</a>.
     </p>
   </section>
 </BaseLayout>
