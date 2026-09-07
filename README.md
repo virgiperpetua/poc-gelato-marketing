@@ -25,7 +25,7 @@ pnpm build
 
 ## Related
 
-- Live site: https://virgiperpetua.github.io/poc-gelato-marketing/
+- Live site: https://gelato.virgiperpetua.com/
 - Live app: https://virgiperpetua.github.io/poc-gelato-app/
 - App source: https://github.com/virgiperpetua/poc-gelato-app
 - Tokens: https://github.com/virgiperpetua/tokens
