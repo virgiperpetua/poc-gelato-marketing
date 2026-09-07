@@ -1,6 +1,6 @@
 /** Outbound destinations shared by every page. */
 export const links = {
-  app: 'https://virgiperpetua.github.io/poc-gelato-app/',
+  app: 'https://app.gelato.virgiperpetua.com/',
   appRepo: 'https://github.com/virgiperpetua/poc-gelato-app',
   marketingRepo: 'https://github.com/virgiperpetua/poc-gelato-marketing',
   tokensRepo: 'https://github.com/virgiperpetua/tokens',

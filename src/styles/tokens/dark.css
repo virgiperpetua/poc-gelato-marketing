@@ -1,7 +1,7 @@
 /**
  * Virginia Perpetua tokens — dark theme.
  */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --vp-color-bg: #2d2b2b;
   --vp-color-surface: #444141;
   --vp-color-text: #f8f4f4;
@@ -9,9 +9,18 @@
   --vp-color-accent: #b494f7;
   --vp-color-accent-strong: #d3c0fb;
   --vp-color-on-accent: #2d2b2b;
-  --vp-color-divider: color-mix(in srgb, #ffffff 25%, transparent);
+  --vp-color-divider: rgba(255, 255, 255, 0.18);
+  --vp-color-divider-strong: rgba(255, 255, 255, 0.28);
+  --vp-color-glow: rgba(180, 148, 247, 0.22);
+  --vp-color-header-backdrop: rgba(45, 43, 43, 0.88);
+  --vp-color-tag-bg: rgba(211, 192, 251, 0.12);
+  --vp-color-soft-surface: rgba(79, 38, 150, 0.18);
+  --vp-color-preview-overlay-start: rgba(68, 65, 65, 0.96);
+  --vp-color-preview-overlay-end: rgba(68, 65, 65, 0.88);
+  --vp-color-preview-outline: rgba(211, 192, 251, 0.14);
+  --vp-color-section-tint: rgba(79, 38, 150, 0.16);
 
-  --vp-shadow-sm: 0 1px 2px color-mix(in srgb, #000000 40%, transparent);
-  --vp-shadow-md: 0 3px 10px color-mix(in srgb, #000000 45%, transparent);
-  --vp-shadow-lg: 0 12px 32px color-mix(in srgb, #000000 55%, transparent);
+  --vp-shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.28);
+  --vp-shadow-md: 0 18px 40px rgba(0, 0, 0, 0.34);
+  --vp-shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.44);
 }
