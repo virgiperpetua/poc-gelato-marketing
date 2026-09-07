@@ -3,7 +3,7 @@
  * Source: src/tokens (DTCG). Prefix: --vp-
  */
 :root,
-[data-theme='light'] {
+[data-theme="light"] {
   --vp-color-neutral-100: #f8f4f4;
   --vp-color-neutral-200: #eae7e7;
   --vp-color-neutral-300: #d7d3d3;
@@ -24,14 +24,23 @@
   --vp-color-accent-800: #4f2696;
   --vp-color-accent-900: #37196a;
 
-  --vp-color-bg: #f3f2f2;
-  --vp-color-surface: #eae9e9;
+  --vp-color-bg: #fcfaf8;
+  --vp-color-surface: #ffffff;
   --vp-color-text: #201e1d;
-  --vp-color-text-muted: #7d7979;
+  --vp-color-text-muted: #625f5f;
   --vp-color-accent: #9b6ff3;
   --vp-color-accent-strong: #6935c4;
   --vp-color-on-accent: #f3f2f2;
-  --vp-color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+  --vp-color-divider: rgba(32, 30, 29, 0.14);
+  --vp-color-divider-strong: rgba(32, 30, 29, 0.24);
+  --vp-color-glow: rgba(155, 111, 243, 0.18);
+  --vp-color-header-backdrop: rgba(252, 250, 248, 0.9);
+  --vp-color-tag-bg: rgba(105, 53, 196, 0.08);
+  --vp-color-soft-surface: rgba(245, 241, 254, 0.34);
+  --vp-color-preview-overlay-start: rgba(255, 255, 255, 0.96);
+  --vp-color-preview-overlay-end: rgba(255, 255, 255, 0.9);
+  --vp-color-preview-outline: rgba(105, 53, 196, 0.08);
+  --vp-color-section-tint: rgba(245, 241, 254, 0.28);
 
   --vp-font-heading: "Archivo", system-ui, sans-serif;
   --vp-font-body: "Archivo", system-ui, sans-serif;
@@ -48,15 +57,15 @@
   --vp-space-section: 96px;
   --vp-space-page-gutter: 48px;
 
-  --vp-radius-sm: 0px;
-  --vp-radius-md: 0px;
-  --vp-radius-lg: 0px;
+  --vp-radius-sm: 10px;
+  --vp-radius-md: 18px;
+  --vp-radius-lg: 28px;
 
   --vp-content-max: 1200px;
   --vp-content-reading: 680px;
   --vp-content-project: 920px;
 
-  --vp-shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
-  --vp-shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
-  --vp-shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+  --vp-shadow-sm: 0 10px 24px rgba(45, 43, 43, 0.08);
+  --vp-shadow-md: 0 18px 40px rgba(45, 43, 43, 0.1);
+  --vp-shadow-lg: 0 24px 64px rgba(45, 43, 43, 0.14);
 }

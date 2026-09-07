@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { links } from '../config';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { links } from "../config";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -11,35 +11,55 @@ const base = import.meta.env.BASE_URL;
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="wrap hero-grid">
-      <div>
-        <p class="kicker mono">CHURN SHEET</p>
+      <div class="hero-copy">
+        <p class="kicker mono eyebrow">Churn Sheet · shop-floor planner</p>
         <h1>Plan the churn. Protect the wash.</h1>
         <p class="lede">
-          A mobile production planner for freezer stock, bladder deliveries, allergen-safe wash
-          steps, and the next shift’s churn list.
+          A mobile production planner for freezer stock, bladder deliveries,
+          allergen-safe wash steps, and the next shift’s churn list.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href={links.app}>Open the app</a>
           <a class="btn btn-secondary" href={`${base}#how`}>See how it works</a>
         </div>
-      </div>
-      <div class="preview" aria-hidden="true">
-        <div class="mono kicker" style="margin:0">TODAY · SHIFT READY</div>
-        <div class="preview-card">
-          <div style="font-weight:600;font-size:14px">Priority queue</div>
-          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
-            Fondant · below PAR · 2 bladders
+        <div class="hero-meta" aria-label="Product highlights">
+          <div class="hero-stat">
+            <strong>Shift-ready planning</strong>
+            Minutes-aware recommendations that fit the remaining churn window.
+          </div>
+          <div class="hero-stat">
+            <strong>Safer wash sequencing</strong>
+            Group order and wash gates keep allergen transitions explicit.
           </div>
         </div>
+      </div>
+      <div class="preview" aria-hidden="true">
+        <div class="preview-header">
+          <div class="mono kicker kicker-tight">TODAY · SHIFT READY</div>
+          <div class="preview-chip">3 actions queued</div>
+        </div>
         <div class="preview-card">
-          <div style="font-weight:600;font-size:14px">Wash gate</div>
-          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
+          <div class="preview-card-header">
+            <div class="preview-card-title">Priority queue</div>
+            <div class="preview-card-status mono">Below PAR</div>
+          </div>
+          <div class="preview-card-note">Fondant · below PAR · 2 bladders</div>
+        </div>
+        <div class="preview-card">
+          <div class="preview-card-header">
+            <div class="preview-card-title">Wash gate</div>
+            <div class="preview-card-status mono">Conditional</div>
+          </div>
+          <div class="preview-card-note">
             Coffee → Group D only if Coffee churned
           </div>
         </div>
         <div class="preview-card">
-          <div style="font-weight:600;font-size:14px">Bake ahead</div>
-          <div style="margin-top:8px;font-size:12px;color:var(--vp-color-text-muted)">
+          <div class="preview-card-header">
+            <div class="preview-card-title">Bake ahead</div>
+            <div class="preview-card-status mono">Before start</div>
+          </div>
+          <div class="preview-card-note">
             Macadamia crunch · before churner starts
           </div>
         </div>
@@ -49,27 +69,41 @@ const base = import.meta.env.BASE_URL;
 
   <section class="section" id="how">
     <div class="wrap">
-      <p class="kicker mono">HOW IT WORKS</p>
-      <h2>One floor tool. Three roles.</h2>
-      <p>
-        Manager approves the plan. Staff count freezers and bake components. Churner follows a
-        wash-safe sequence without guessing the next allergen risk.
-      </p>
+      <div class="section-intro">
+        <div>
+          <p class="kicker mono">How it works</p>
+          <h2>One floor tool. Three roles.</h2>
+        </div>
+        <p>
+          Manager approves the plan. Staff count freezers and bake components.
+          Churner follows a wash-safe sequence without guessing the next
+          allergen risk.
+        </p>
+      </div>
       <div class="pillars">
-        <article>
-          <div class="mono" style="color:var(--vp-color-accent-strong)">01</div>
+        <article class="pillar">
+          <div class="mono pillar-index">01</div>
           <h3>Stock truth</h3>
-          <p>−20 / −14 counts, bladder deliveries, and use-today alerts feed the priority engine.</p>
+          <p>
+            −20 / −14 counts, bladder deliveries, and use-today alerts feed the
+            priority engine.
+          </p>
         </article>
-        <article>
-          <div class="mono" style="color:var(--vp-color-accent-strong)">02</div>
+        <article class="pillar">
+          <div class="mono pillar-index">02</div>
           <h3>Shift-fit plans</h3>
-          <p>Recommendations fill available churn minutes after setup, wash, and clean-down.</p>
+          <p>
+            Recommendations fill available churn minutes after setup, wash, and
+            clean-down.
+          </p>
         </article>
-        <article>
-          <div class="mono" style="color:var(--vp-color-accent-strong)">03</div>
+        <article class="pillar">
+          <div class="mono pillar-index">03</div>
           <h3>Safe sequence</h3>
-          <p>Group order plus conditional washes (Coffee → D) so the machine stays allergen-safe.</p>
+          <p>
+            Group order plus conditional washes (Coffee → D) so the machine
+            stays allergen-safe.
+          </p>
         </article>
       </div>
     </div>
@@ -77,15 +111,33 @@ const base = import.meta.env.BASE_URL;
 
   <section class="section surface">
     <div class="wrap">
-      <h2>Built for the shop floor. Ready for an API.</h2>
-      <p>
-        The PoC stores everything in localStorage behind a repository interface. When the Nest API
-        lands, the same screens swap to HTTP without a rewrite.
-      </p>
-      <p class="cta-row" style="margin-top:32px">
-        <a class="btn btn-primary" href={links.app}>Open the app</a>
-        <a class="btn btn-secondary" href={links.appRepo}>Read the source</a>
-      </p>
+      <div class="callout">
+        <div>
+          <p class="kicker mono">Implementation</p>
+          <h2>Built for the shop floor. Ready for an API.</h2>
+          <p>
+            The PoC stores everything in localStorage behind a repository
+            interface. When the Nest API lands, the same screens swap to HTTP
+            without a rewrite.
+          </p>
+          <p class="cta-row callout-actions">
+            <a class="btn btn-primary" href={links.app}>Open the app</a>
+            <a class="btn btn-secondary" href={links.appRepo}>Read the source</a
+            >
+          </p>
+        </div>
+        <div class="callout-list" aria-label="Technical highlights">
+          <div class="callout-list-item">
+            Repository boundary keeps storage concerns isolated.
+          </div>
+          <div class="callout-list-item">
+            Same operator flow works today in the browser and later via HTTP.
+          </div>
+          <div class="callout-list-item">
+            Public PoC with source available for both the app and the site.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

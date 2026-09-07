@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import { links } from '../config';
+import "../styles/global.css";
+import { links } from "../config";
 
 interface Props {
   title: string;
@@ -27,15 +27,18 @@ const base = import.meta.env.BASE_URL;
     />
     <style is:global>
       :root {
-        --vp-font-heading: 'Archivo', system-ui, sans-serif;
-        --vp-font-body: 'Archivo', system-ui, sans-serif;
+        --vp-font-heading: "Archivo", system-ui, sans-serif;
+        --vp-font-body: "Archivo", system-ui, sans-serif;
       }
     </style>
   </head>
   <body>
     <header class="site-header">
       <div class="wrap site-header-inner">
-        <a class="brand" href={base}>CHURN SHEET</a>
+        <a class="brand" href={base}>
+          <span class="brand-mark mono">CS</span>
+          <span>CHURN SHEET</span>
+        </a>
         <nav class="nav">
           <a href={`${base}#how`}>How it works</a>
           <a href={`${base}about`}>About</a>
