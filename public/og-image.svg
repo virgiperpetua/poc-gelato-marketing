@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title>Churn Sheet social card</title>
+  <desc>Social preview image for the Churn Sheet marketing site.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" x2="1040" y1="40" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fcfaf8" />
+      <stop offset="1" stop-color="#f5f1fe" />
+    </linearGradient>
+    <linearGradient id="badge" x1="90" x2="1110" y1="40" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9b6ff3" />
+      <stop offset="1" stop-color="#6935c4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="936" cy="96" r="184" fill="#e9defd" opacity=".75" />
+  <circle cx="1048" cy="496" r="210" fill="#f5f1fe" opacity=".9" />
+  <rect x="72" y="72" width="1056" height="486" rx="40" fill="#ffffff" stroke="#e9defd" stroke-width="2" />
+  <rect x="112" y="112" width="120" height="120" rx="32" fill="url(#badge)" />
+  <text x="172" y="187" fill="#f3f2f2" font-family="Archivo, Arial, sans-serif" font-size="54" font-weight="800" text-anchor="middle">CS</text>
+  <text x="272" y="170" fill="#6935c4" font-family="Archivo, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">CHURN SHEET</text>
+  <text x="112" y="312" fill="#201e1d" font-family="Archivo, Arial, sans-serif" font-size="76" font-weight="800">
+    <tspan x="112" dy="0">Plan the churn.</tspan>
+    <tspan x="112" dy="86">Protect the wash.</tspan>
+  </text>
+  <text x="112" y="462" fill="#625f5f" font-family="Archivo, Arial, sans-serif" font-size="30" font-weight="400">
+    <tspan x="112" dy="0">Production planning for freezer stock, wash-safe sequencing,</tspan>
+    <tspan x="112" dy="44">and next-shift churn decisions.</tspan>
+  </text>
+  <rect x="834" y="230" width="220" height="68" rx="34" fill="#f5f1fe" />
+  <text x="944" y="273" fill="#6935c4" font-family="Archivo, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">SHIFT READY</text>
+  <rect x="782" y="334" width="272" height="128" rx="28" fill="#ffffff" stroke="#e9defd" stroke-width="2" />
+  <text x="818" y="386" fill="#201e1d" font-family="Archivo, Arial, sans-serif" font-size="28" font-weight="700">Priority queue</text>
+  <text x="818" y="430" fill="#625f5f" font-family="Archivo, Arial, sans-serif" font-size="22">Fondant below PAR · 2 bladders</text>
+</svg>

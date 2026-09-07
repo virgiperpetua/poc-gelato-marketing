@@ -9,6 +9,9 @@ interface Props {
 
 const { title, description } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = new URL(`${base}og-image.svg`, Astro.site);
+const logoUrl = `${base}logo-mark.svg`;
 ---
 
 <!doctype html>
@@ -19,6 +22,20 @@ const base = import.meta.env.BASE_URL;
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#9b6ff3" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={logoUrl} type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Churn Sheet" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content="Churn Sheet social preview card" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content="Churn Sheet social preview card" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +53,7 @@ const base = import.meta.env.BASE_URL;
     <header class="site-header">
       <div class="wrap site-header-inner">
         <a class="brand" href={base}>
-          <span class="brand-mark mono">CS</span>
+          <img class="brand-logo" src={logoUrl} alt="" width="36" height="36" />
           <span>CHURN SHEET</span>
         </a>
         <nav class="nav">
